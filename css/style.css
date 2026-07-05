@@ -1,15 +1,842 @@
+/* ==========================================================
+   CineManager
+   Sistema de Gerenciamento de Filmes
+   Desenvolvimento Web II
+   ----------------------------------------------------------
+   PARTE 1
+   - Geral
+   - Tipografia
+   - Navbar
+   - Containers
+   - Cabeçalhos
+   - Cards
+   - Botões
+   - Formulários
+==========================================================*/
+
+
+/*==========================================================
+=            GERAL
+==========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    background-color:#f8f9fa;
+
+    background:#F4F5F7;
+
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+
+    color:#212529;
+
 }
 
-.card{
-    border-radius:12px;
+
+/*==========================================================
+=            LINKS
+==========================================================*/
+
+a{
+
+    text-decoration:none;
+
 }
 
-.navbar-brand{
-    font-weight:bold;
+a:hover{
+
+    text-decoration:none;
+
 }
+
+
+/*==========================================================
+=            CONTAINER
+==========================================================*/
 
 .container{
-    max-width:1100px;
+
+    margin-top:25px;
+    margin-bottom:40px;
+
+}
+
+
+/*==========================================================
+=            NAVBAR
+==========================================================*/
+
+.navbar{
+
+    background:#111111 !important;
+
+    border-bottom:3px solid #C1121F;
+
+    padding:10px 0;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+
+}
+
+
+/*==========================================================
+=            LOGO
+==========================================================*/
+
+.navbar-brand{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+.logo-white{
+
+    color:#FFFFFF;
+
+}
+
+.logo-red{
+
+    color:#C1121F;
+
+}
+
+
+/*==========================================================
+=            MENU
+==========================================================*/
+
+
+
+.nav-link{
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+.nav-link i{
+
+    margin-right:6px;
+
+}
+
+.nav-link:hover{
+
+    color:#C1121F !important;
+
+}
+
+
+/*==========================================================
+=            USUÁRIO
+==========================================================*/
+
+.usuario-logado{
+
+    color:#FFFFFF;
+
+    font-weight:600;
+
+}
+
+.usuario-logado i{
+
+    color:#FFFFFF;
+
+}
+
+
+/*==========================================================
+=            BOTÃO SAIR
+==========================================================*/
+
+.btn-sair{
+
+    color:#C1121F !important;
+
+    font-weight:600;
+
+}
+
+.btn-sair:hover{
+
+    color:#FFFFFF !important;
+
+}
+
+
+/*==========================================================
+=            TÍTULOS DAS PÁGINAS
+==========================================================*/
+
+.page-banner{
+
+    background:#FFFFFF;
+
+    border-radius:14px;
+
+    padding:22px 28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+
+}
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.page-title{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:#212529;
+
+    margin-bottom:5px;
+
+}
+
+.page-subtitle{
+
+    color:#6C757D;
+
+    font-size:17px;
+
+    margin-bottom:0;
+
+}
+
+
+/*==========================================================
+=            CARDS
+==========================================================*/
+
+.card{
+
+    border:none;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:#FFFFFF;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+.card-header{
+
+    background:#212529;
+
+    color:#FFFFFF;
+
+    font-weight:600;
+
+    border:none;
+
+    padding:16px 20px;
+
+}
+
+.card-body{
+
+    padding:28px;
+
+}
+
+
+/*==========================================================
+=            BOTÕES
+==========================================================*/
+
+.btn{
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    padding:10px 18px;
+
+    transition:.25s;
+
+}
+
+.btn i{
+
+    margin-right:6px;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* Botão principal */
+
+.btn-primary{
+
+    background:#C1121F;
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:#A30F1A;
+
+}
+
+
+/* Botão sucesso */
+
+.btn-success{
+
+    box-shadow:0 4px 10px rgba(25,135,84,.30);
+
+}
+
+.btn-success:hover{
+
+    box-shadow:0 8px 18px rgba(25,135,84,.45);
+
+}
+
+
+/* Botão editar */
+
+.btn-warning{
+
+    color:#000;
+
+    font-weight:600;
+
+}
+
+.btn-warning:hover{
+
+    color:#000;
+
+}
+
+
+/* Botão excluir */
+
+.btn-danger{
+
+    background:#A10E18;
+
+    border:none;
+
+}
+
+.btn-danger:hover{
+
+    background:#7F0A13;
+
+}
+
+
+/* Botão secundário */
+
+.btn-secondary{
+
+    background:#6C757D;
+
+    border:none;
+
+}
+
+
+/*==========================================================
+=            FORMULÁRIOS
+==========================================================*/
+
+form{
+
+    margin-top:10px;
+
+}
+
+
+/* Labels */
+
+.form-label{
+
+    font-weight:600;
+
+    margin-bottom:6px;
+
+    color:#343A40;
+
+}
+
+
+/* Campos */
+
+.form-control,
+.form-select{
+
+    border-radius:8px;
+
+    border:1px solid #CED4DA;
+
+    padding:11px 14px;
+
+    transition:.25s;
+
+}
+
+
+/* Focus */
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:#C1121F;
+
+    box-shadow:0 0 0 .18rem rgba(193,18,31,.20);
+
+}
+
+
+/* Radios */
+
+.form-check{
+
+    margin-top:6px;
+
+}
+
+.form-check-label{
+
+    margin-left:3px;
+
+}
+
+.form-check-input:checked{
+
+    background:#C1121F;
+
+    border-color:#C1121F;
+
+}
+
+
+/* Textareas */
+
+textarea{
+
+    resize:none;
+
+}
+
+
+/* Espaçamento */
+
+.mb-custom{
+
+    margin-bottom:20px;
+
+}
+
+/*==========================================================
+=            TABELAS
+==========================================================*/
+
+.table{
+
+    margin-bottom:0;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    vertical-align:middle;
+
+}
+
+.table thead{
+
+    background:#212529;
+
+}
+
+.table thead th{
+
+    color:#FFFFFF;
+
+    font-weight:600;
+
+    border:none;
+
+    padding:16px;
+
+}
+
+.table tbody td{
+
+    padding:14px 16px;
+
+    vertical-align:middle;
+
+}
+
+.table-striped tbody tr:nth-child(even){
+
+    background:#F8F9FA;
+
+}
+
+.table-hover tbody tr{
+
+    transition:.20s;
+
+}
+
+.table-hover tbody tr:hover{
+
+    background:#FFF5F5;
+
+    transition:.2s;
+
+}
+
+
+/*==========================================================
+=            BOTÕES DAS TABELAS
+==========================================================*/
+
+.table .btn{
+
+    min-width:90px;
+
+    padding:7px 14px;
+
+    border-radius:7px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.table .btn-warning{
+
+    margin-right:5px;
+
+}
+
+
+/*==========================================================
+=            ALERTAS
+==========================================================*/
+
+.alert{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:15px 20px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+
+}
+
+.alert-success{
+
+    background:#D1E7DD;
+
+    color:#0F5132;
+
+}
+
+.alert-danger{
+
+    background:#F8D7DA;
+
+    color:#842029;
+
+}
+
+.alert-warning{
+
+    background:#FFF3CD;
+
+    color:#664D03;
+
+}
+
+.alert-info{
+
+    background:#CFE2FF;
+
+    color:#084298;
+
+}
+
+
+/*==========================================================
+=            BADGES
+==========================================================*/
+
+.badge{
+
+    border-radius:20px;
+
+    padding:8px 12px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+/*==========================================================
+=            SEPARADORES
+==========================================================*/
+
+hr{
+
+    opacity:.15;
+
+}
+
+
+/*==========================================================
+=            FOOTER
+==========================================================*/
+
+footer{
+
+    margin-top:70px;
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#6C757D;
+
+    font-size:15px;
+
+    border-top:1px solid #DDD;
+
+}
+
+
+/*==========================================================
+=            ANIMAÇÕES
+==========================================================*/
+
+.fade-up{
+
+    animation:fadeUp .35s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==========================================================
+=            SCROLLBAR
+==========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ECECEC;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#C1121F;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#A10E18;
+
+}
+
+
+/*==========================================================
+=            UTILITÁRIOS
+==========================================================*/
+
+.shadow-custom{
+
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+
+}
+
+.rounded-custom{
+
+    border-radius:12px;
+
+}
+
+.bg-dark-custom{
+
+    background:#212529;
+
+    color:#FFFFFF;
+
+}
+
+.text-red{
+
+    color:#C1121F;
+
+}
+
+.cursor-pointer{
+
+    cursor:pointer;
+
+}
+
+
+/*==========================================================
+=            RESPONSIVIDADE
+==========================================================*/
+
+@media (max-width:992px){
+
+    .page-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .navbar-brand{
+
+        font-size:28px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .page-title{
+
+        font-size:30px;
+
+    }
+
+    .page-subtitle{
+
+        font-size:15px;
+
+    }
+
+    .container{
+
+        margin-top:25px;
+
+    }
+
+    .table{
+
+        font-size:14px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        margin-bottom:8px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .navbar-brand{
+
+        font-size:24px;
+
+    }
+
 }

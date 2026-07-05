@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
 
     <div class="container">
 
-        <a class="navbar-brand" href="/index.php">
+        <a class="navbar-brand fw-bold" href="/index.php">
 
-            🎬 Sistema de Filmes
+            <span style="color:white;">🎬 Cine</span><span style="color:#E50914;">Manager</span>
 
         </a>
 
@@ -18,13 +18,17 @@
 
         </button>
 
-        <div class="collapse navbar-collapse" id="menu">
+        <div
+            class="collapse navbar-collapse"
+            id="menu">
 
-            <ul class="navbar-nav me-auto">
+            <ul class="navbar-nav mx-auto">
 
                 <li class="nav-item">
 
                     <a class="nav-link" href="/index.php">
+
+                        <i class="bi bi-house-door-fill"></i>
 
                         Início
 
@@ -36,6 +40,8 @@
 
                     <a class="nav-link" href="/filmes/listar.php">
 
+                        <i class="bi bi-film"></i>
+
                         Filmes
 
                     </a>
@@ -46,6 +52,8 @@
 
                     <a class="nav-link" href="/generos/listar.php">
 
+                        <i class="bi bi-collection-play"></i>
+
                         Gêneros
 
                     </a>
@@ -54,19 +62,33 @@
 
             </ul>
 
-            <span class="navbar-text me-3">
+            <ul class="navbar-nav">
 
-                <?= htmlspecialchars($_SESSION["nome"]) ?>
+                <li class="nav-item">
 
-            </span>
+                    <span class="nav-link">
 
-            <a
-                href="/logout.php"
-                class="btn btn-outline-light">
+                        <i class="bi bi-person-circle"></i>
 
-                Sair
+                        <?= htmlspecialchars($_SESSION["usuario"]) ?>
 
-            </a>
+                    </span>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link text-danger" href="/logout.php">
+
+                        <i class="bi bi-box-arrow-right"></i>
+
+                        Sair
+
+                    </a>
+
+                </li>
+
+            </ul>
 
         </div>
 

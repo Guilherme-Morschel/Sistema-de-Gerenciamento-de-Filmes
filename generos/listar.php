@@ -47,14 +47,25 @@ $total = mysqli_num_rows($resultado);
 
     <div class="d-flex justify-content-between align-items-center mb-4">
 
-        <h2>Gêneros Cadastrados (<?= $total ?>)</h2>
+        <div class="page-header">
 
-        <a href="cadastrar.php" class="btn btn-success">
+            <div>
 
-            + Novo Gênero
+                <h1 class="page-title">
+                    🎭 Gêneros
+                </h1>
+                <p class="page-subtitle">
+                    Cadastre e organize os gêneros disponíveis para os filmes.
+                </p>
 
-        </a>
+            </div>
 
+            <a href="cadastrar.php" class="btn btn-success">
+                <i class="bi bi-plus-circle"></i>
+            Novo Gênero
+            </a>
+
+        </div>
     </div>
 
     <div class="card shadow">
@@ -97,7 +108,7 @@ $total = mysqli_num_rows($resultado);
                                         href="editar.php?id=<?= $genero["id"] ?>"
                                         class="btn btn-warning btn-sm">
 
-                                        Editar
+                                        <i class="bi bi-pencil-square"></i> Editar
 
                                     </a>
 
@@ -106,7 +117,7 @@ $total = mysqli_num_rows($resultado);
                                         class="btn btn-danger btn-sm"
                                         onclick="return confirm('Deseja realmente excluir este gênero?');">
 
-                                        Excluir
+                                        <i class="bi bi-trash3-fill"></i> Excluir
 
                                     </a>
 

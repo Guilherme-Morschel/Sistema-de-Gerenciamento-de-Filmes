@@ -1,5 +1,23 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<footer>
 
-</body>
+    <div class="container">
 
-</html>
+        <hr>
+
+        <p>
+
+            🎬 CineManager
+
+            <br>
+
+            Sistema desenvolvido por Guilherme Morschel
+
+            <br>
+
+            Desenvolvimento Web II
+
+        </p>
+
+    </div>
+
+</footer>

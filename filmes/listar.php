@@ -55,15 +55,28 @@ $total = mysqli_num_rows($resultado);
 
     <div class="d-flex justify-content-between align-items-center mb-4">
 
-        <h2>Filmes Cadastrados (<?= $total ?>)</h2>
+        <div class="page-header">
 
-        <a href="cadastrar.php" class="btn btn-success">
+            <div>
 
-            + Novo Filme
+                <h1 class="page-title">
+                🎥 Filmes
+                </h1>
 
-        </a>
+                <p class="page-subtitle">
+                Gerencie todos os filmes cadastrados no sistema.
+                </p>
 
+            </div>
+
+            <a href="cadastrar.php" class="btn btn-success">
+                <i class="bi bi-plus-circle"></i>
+                Novo Filme
+            </a>
+
+        </div>
     </div>
+
 
     <div class="card shadow">
 
@@ -118,7 +131,7 @@ $total = mysqli_num_rows($resultado);
                                         href="editar.php?id=<?= $filme["id"] ?>"
                                         class="btn btn-warning btn-sm">
 
-                                        Editar
+                                        <i class="bi bi-pencil-square"></i> Editar
 
                                     </a>
 
@@ -126,7 +139,7 @@ $total = mysqli_num_rows($resultado);
                                         href="excluir.php?id=<?= $filme["id"] ?>"
                                         class="btn btn-danger btn-sm">
 
-                                        Excluir
+                                        <i class="bi bi-trash3-fill"></i> Excluir
 
                                     </a>
 
